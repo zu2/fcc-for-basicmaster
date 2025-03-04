@@ -31,8 +31,6 @@ plot.bin:	plot.o mb-plot.o
 .bin.mot:
 	objcopy -I binary -O ihex --adjust-vma=0x4000 $*.bin $*.hex
 	objcopy -I binary -O srec --adjust-vma=0x4000 $*.bin $*.mot
-	scp $*.hex /Volumes/Zesty\ D/BASICMASTER/ebmjr
-	scp $*.mot /Volumes/Zesty\ D/BASICMASTER/j68_r1_4
 
 
 mb-plot.o: mb-plot.s
